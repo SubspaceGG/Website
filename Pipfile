@@ -11,6 +11,7 @@ django-allauth = "*"
 django-ninja = "*"
 gunicorn = "*"
 psycopg2-binary = "*"
+gevent = "*"
 
 [dev-packages]
 
