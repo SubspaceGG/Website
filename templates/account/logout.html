@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block head_title %}• Log Out{% endblock %}
+
+{% block content %}
+    <section class="flex items-center justify-center h-screen">
+        <form method="post" action="{% url 'account_logout' %}" class="bg-gray-900 rounded px-8 pt-6 pb-8 mb-4 shadow-lg">
+            {% csrf_token %}
+            {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+            {% endif %}
+            <div class="text-gray-200 font-bold text-xl mb-2">Log Out</div>
+            <div class="text-center p-8">
+                <p class="text-gray-200 text-base">Are you sure you want to log out?</p>
+            </div>
+            <div class="flex items-center justify-between">
+                <a
+                        class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-red-700 hover:bg-red-900 focus:shadow-outline focus:outline-none"
+                        href="/"
+                >
+                    Cancel
+                </a>
+                <button
+                        type="submit"
+                        class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-cyan-700 hover:bg-cyan-900 focus:shadow-outline focus:outline-none"
+                >
+                    Log Out
+                </button>
+            </div>
+        </form>
+    </section>
+{% endblock %}
