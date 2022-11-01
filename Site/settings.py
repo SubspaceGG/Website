@@ -33,7 +33,8 @@ DEBUG = os.getenv("DEBUG") != "False"
 ALLOWED_HOSTS = ["127.0.0.1", "subspace.gg"]
 SITE_ID = 1
 SOCIALACCOUNT_LOGIN_ON_GET = True
-SOCIALACCOUNT_ADAPTER = "Site.adapters.SocialAccountAdapter"
+# SOCIALACCOUNT_ADAPTER = "Site.adapters.SocialAccountAdapter"
+LOGIN_REDIRECT_URL = "/"
 
 # Application definition
 
