@@ -7,10 +7,10 @@ name = "pypi"
 django = "*"
 python-dotenv = "*"
 django-tailwind = "*"
-psycopg2 = "*"
 django-allauth = "*"
 django-ninja = "*"
 gunicorn = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
